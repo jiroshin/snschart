@@ -10,17 +10,17 @@ class ReviewsController < ApplicationController
     @user = User.find(params[:id])
     @review = User.find(params[:id]).reviews.build(review_params)
     if @review.save
-      flash[:success] = 'レビューありがとう！'
+      flash[:notice] = '投稿ありがとう！'
       redirect_to chart_url
     else
-      flash.now[:danger] = 'レビューの投稿に失敗しました'
+      flash.now[:notice] = '投稿に失敗しました'
       render 'reviews/new'
     end
   end
   
   def destroy
     @destroy_reviews.destroy_all
-    flash[:success] = 'レビューをリセットしました。'
+    flash[:notice] = 'データをリセットしました'
     redirect_back(fallback_location: root_path)
   end
 

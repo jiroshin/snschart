@@ -1,9 +1,9 @@
 <div style="text-align:center; margin-bottom: 50px;">
-<div id="share_btn" class="btn btn-default" data-clipboard-text="snschart.herokuapp.com/chart/<%= @user.id %>">URLをコピーしてSNSでシェアしよう！</div>
+<div id="share_btn" class="btn btn-default" data-clipboard-text="snschart.herokuapp.com/chart/<%= @user.id %>">SNSでシェアしよう！</div>
 </div>
 
 
-<h1><%= @user.username %>さんのチャート</h1>
+<h3><%= @user.username %>さんの人柄チャート</h3>
 
 <div class="chart-container" style="position: relative">
 <canvas id="myChart"></canvas>
@@ -27,10 +27,10 @@ var myChart = new Chart(ctx, {
          },
     scale: {
       pointLabels: {
-        fontSize: 14 //フォントサイズ
+        fontSize: 12 //フォントサイズ
       },
       ticks: { //http://www.chartjs.org/docs/#scales-radial-linear-scale
-        stepSize: 2, // 目盛の間隔
+        stepSize: 1, // 目盛の間隔
         max: 10, //最大値
         beginAtZero: true
       },
@@ -50,7 +50,7 @@ var myChart = new Chart(ctx, {
 <% end %>
 </div>
   
-<div style="text-align:center; margin-bottom: 60px;"><%= link_to 'この人に声を届ける', review_new_path, class: 'square_btn' %></div>
+<div style="text-align:center; margin-bottom: 60px;"><%= link_to '人柄報告をする', review_new_path, class: 'square_btn' %></div>
 
 
 <% if current_user == @user %>

@@ -1,4 +1,4 @@
-　<h1><%= @user.username %>さんのレビューをかく</h1>
+　<h3><%= @user.username %>さんの人柄を報告</h3>
 <%= form_for @review, url: review_create_path do |f| %>
   <div class="form-group">
     <%= f.label :kind, 'やさしい' %>
@@ -29,7 +29,7 @@
     <%= f.text_area :comment, class: 'form-control', :placeholder => "かならずコメントを書きましょう！(100文字以内)" %>
   </div>
   
-  <div style="text-align:center;">
+  <div style="text-align:center; margin-bottom:60px;">
     <%= f.submit '投稿', class: 'square_btn' %>
   </div>
 <% end %>

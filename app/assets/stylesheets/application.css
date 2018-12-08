@@ -60,3 +60,19 @@ body {
     background: #ff7f50;
     color: #384B41;
 }
+
+.notice {
+  color: #F25F5C;
+  text-align: center;
+  margin-bottom:30px;
+  border: solid 3px #F25F5C;/*線*/
+  border-radius: 20px;/*角の丸み*/
+}
+
+.alert {
+  color: #F25F5C;
+  text-align: center;
+  margin-bottom:30px;
+  border: solid 3px #F25F5C;/*線*/
+  border-radius: 20px;/*角の丸み*/
+}
