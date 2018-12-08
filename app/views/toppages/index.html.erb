@@ -1,7 +1,14 @@
+<div style="text-align:center; margin-bottom: 60px;" class="top-img"><img src="assets/toppage.png" alt="SNS人柄調査(画像)"></div>
 <% if user_signed_in? %>
     <div style="text-align:center; margin-bottom:50px;"><%= link_to 'じぶんのチャートページへ', chart_path(current_user), class: 'square_btn' %></div>
 <% else %>
-    <div style="text-align:center; margin-bottom:5px;"><%= link_to 'メールアドレスで登録', new_user_registration_path, class: 'square_btn' %></div>
+    <div style="text-align:center; margin-bottom:5px;"><%= link_to 'チャートページをつくる', new_user_registration_path, class: 'square_btn' %></div>
     <div style="text-align:center; margin-bottom:50px;"><%= link_to '>ログインはこちら', new_user_session_path %></div>
 <% end %>
-
+<div class="howtouse">
+<h4>使い方</h4>
+<p>1. ユーザー登録して自分の人柄チャートページを立ち上げよう</p>
+<p>2. 自分のチャートページのURLをコピーしてSNSに投稿しよう</p>
+<p>3. SNSのフォロワーから匿名であなたの人柄報告が寄せられます</p>
+<p>4. 結果をSNSで共有しよう</p>
+</div>

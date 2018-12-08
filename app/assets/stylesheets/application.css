@@ -34,6 +34,7 @@
 
 body {
     background-color :#F25F5C;
+    font-family: 'ＭＳ Ｐ明朝','MS PMincho','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
 }
 
 .center-color{
@@ -75,4 +76,14 @@ body {
   margin-bottom:30px;
   border: solid 3px #F25F5C;/*線*/
   border-radius: 20px;/*角の丸み*/
+}
+
+.howtouse {
+    border-top: solid 2px #F25F5C;/*線*/
+    border-bottom: solid 2px #F25F5C;/*線*/
+    margin-bottom: 30px;
+}
+
+.top-img img {
+    width: 100%;
 }
