@@ -1,6 +1,7 @@
 <footer>
   <div class="text-center text-muted">© 2018 SNS人柄チャート</div>
 <% if user_signed_in? %>
+　　<div style="text-align:center; margin-bottom:10px;"><%= link_to '登録情報の変更', edit_user_registration_path %></div>
     <div style="text-align:center;"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></div>
 <% end %>
 </footer>

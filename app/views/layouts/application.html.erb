@@ -11,19 +11,27 @@
     <meta property="og:url" content="snschart.herokuapp.com/" /> 
     <meta property="og:title" content="SNS人柄チャート" /> 
     <meta property="og:description" content="私はどんな人？匿名で人柄報告送ろう" /> 
-    <meta property="og:image" content="app/images/twitter.png" /> 
+    <meta property="og:image" content="images/twitter.png" /> 
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-　　<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.13/clipboard.min.js"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script>
+        function copyToClipboard() {
+            // コピー対象をJavaScript上で変数として定義する
+            var copyTarget = document.getElementById("copyTarget");
+            // コピー対象のテキストを選択する
+            copyTarget.select();
+            // 選択しているテキストをクリップボードにコピーする
+            document.execCommand("Copy");
+            // コピーをお知らせする
+            alert("URLをコピーしました。SNSで共有しよう！ : " + copyTarget.value);
+        }
+    </script>
   </head>
 
   <body>
