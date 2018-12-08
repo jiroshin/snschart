@@ -1,0 +1,58 @@
+<div style="text-align:center; margin-bottom: 50px;">
+<div id="share_btn" class="btn btn-default" data-clipboard-text="/chart/<%= @user.id %>">URLをコピーしてSNSでシェアしよう！</div>
+</div>
+
+
+<h1><%= @user.username %>さんのチャート</h1>
+
+<div class="chart-container" style="position: relative">
+<canvas id="myChart"></canvas>
+<script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'radar',
+    data: {
+        labels: ["やさしい","カッコいい","かわいい","おしゃれ","あたま良い","おもしろい"],
+        datasets: [{
+            label: "ID: <%= @user.id %>さんのチャート",
+            data: [<%= @kind %>,<%= @cool %>,<%= @cute %>,<%= @fashion %>,<%= @smart %>,<%= @fun %>],
+            backgroundColor: 'red',
+            borderColor: '#F25F5C',
+            fill: false
+        }]
+    },
+    options: {
+        legend: {
+            display: false
+         },
+    scale: {
+      pointLabels: {
+        fontSize: 14 //フォントサイズ
+      },
+      ticks: { //http://www.chartjs.org/docs/#scales-radial-linear-scale
+        stepSize: 2, // 目盛の間隔
+        max: 10, //最大値
+        beginAtZero: true
+      },
+    }
+  }
+});
+</script>
+</div>
+
+
+<div class="comment">
+<p>みんなの一言</p>
+<% @reviews.each do |review| %>
+<ul class="list-group">
+　　<li class="list-group-item"><%= review.comment %></li>
+</ul>
+<% end %>
+</div>
+  
+<div style="text-align:center; margin-bottom: 60px;"><%= link_to 'この人に声を届ける', review_new_path, class: 'square_btn' %></div>
+
+
+<% if current_user == @user %>
+<div style="text-align:center; margin-bottom: 10px;"><%= link_to "すべてのデータをリセット", review_destroy_path, method: :delete, data: { confirm: "すべてのデータが削除されます。よろしいですか？" }, class: 'btn btn-default btn-xs' %></div>
+<% end %>

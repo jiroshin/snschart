@@ -1,0 +1,6 @@
+<footer>
+  <div class="text-center text-muted">© 2018 SS</div>
+<% if user_signed_in? %>
+    <div style="text-align:center;"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></div>
+<% end %>
+</footer>

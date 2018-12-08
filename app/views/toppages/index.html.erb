@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+    <div style="text-align:center; margin-bottom:50px;"><%= link_to 'じぶんのチャートページへ', chart_path(current_user), class: 'square_btn' %></div>
+<% else %>
+    <div style="text-align:center; margin-bottom:5px;"><%= link_to 'メールアドレスで登録', new_user_registration_path, class: 'square_btn' %></div>
+    <div style="text-align:center; margin-bottom:50px;"><%= link_to '>ログインはこちら', new_user_session_path %></div>
+<% end %>
+

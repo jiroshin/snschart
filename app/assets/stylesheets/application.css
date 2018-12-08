@@ -1,0 +1,62 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@media (min-width: 768px) {
+.container {
+    width: 700px;
+}
+}
+
+.comment {
+ height: 200px;
+ overflow: scroll;
+ padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #384B41;/*文字色*/
+    background: #FFF;
+    border: solid 3px #F25F5C;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+body {
+    background-color :#F25F5C;
+}
+
+.center-color{
+    margin-top:30px;
+    margin-bottom:30px;
+    padding:30px;
+    background-color :#FAFAFA;
+    border: solid 3px #F25F5C;/*線*/
+    border-radius: 50px;/*角の丸み*/
+}
+
+.square_btn{
+    display: inline-block;
+    padding: 1em 5em;
+    text-decoration: none;
+    color: #FFF;
+    border: dashed 1px #F25F5C;
+    background: #ff6347;
+    border-radius: 3px;
+    transition: .4s;
+}
+
+.square_btn:hover {
+    background: #ff7f50;
+    color: #384B41;
+}

@@ -1,0 +1,35 @@
+　<h1><%= @user.username %>さんのレビューをかく</h1>
+<%= form_for @review, url: review_create_path do |f| %>
+  <div class="form-group">
+    <%= f.label :kind, 'やさしい' %>
+    <%= f.number_field :kind, class: 'form-control', :placeholder => "半角数字 0~10 を入力" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :cool, 'カッコいい' %>
+    <%= f.number_field :cool, class: 'form-control', :placeholder => "半角数字 0~10 を入力" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :cute, 'かわいい' %>
+    <%= f.number_field :cute, class: 'form-control', :placeholder => "半角数字 0~10 を入力" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :fashion, 'おしゃれ' %>
+    <%= f.number_field :fashion, class: 'form-control', :placeholder => "半角数字 0~10 を入力" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :smart, 'あたま良い' %>
+    <%= f.number_field :smart, class: 'form-control', :placeholder => "半角数字 0~10 を入力" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :fun, 'おもしろい' %>
+    <%= f.number_field :fun, class: 'form-control', :placeholder => "半角数字 0~10 を入力" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :comment, '最後にひとこと' %>
+    <%= f.text_area :comment, class: 'form-control', :placeholder => "かならずコメントを書きましょう！(100文字以内)" %>
+  </div>
+  
+  <div style="text-align:center;">
+    <%= f.submit '投稿', class: 'square_btn' %>
+  </div>
+<% end %>
