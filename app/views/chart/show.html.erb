@@ -3,9 +3,9 @@
     <div class="btn btn-default"><i class="fab fa-twitter fa-lg"></i> Twitterでページをシェア</div>
 </a></div>
 
-<h3><%= @user.username %>さんの人柄チャート</h3>
+<h4><%= @user.username %>さんの人柄チャート</h4>
 
-<div class="chart-container" style="position: relative">
+<div class="chart-container" style="position: relative;">
 <canvas id="myChart"></canvas>
 <script>
 var ctx = document.getElementById("myChart").getContext('2d');
@@ -27,7 +27,7 @@ var myChart = new Chart(ctx, {
          },
     scale: {
       pointLabels: {
-        fontSize: 12 //フォントサイズ
+        fontSize: 10 //フォントサイズ
       },
       ticks: { //http://www.chartjs.org/docs/#scales-radial-linear-scale
         stepSize: 1, // 目盛の間隔

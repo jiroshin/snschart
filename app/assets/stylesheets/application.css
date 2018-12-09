@@ -20,6 +20,12 @@
 }
 }
 
+@media (max-width: 767px) {
+.square_btn{
+  padding: 5px
+}
+}
+
 .comment {
  height: 200px;
  overflow: scroll;
@@ -48,7 +54,7 @@ body {
 
 .square_btn{
     display: inline-block;
-    padding: 1em 5em;
+    padding: 10px 20px;
     text-decoration: none;
     color: #FFF;
     border: dashed 1px #F25F5C;

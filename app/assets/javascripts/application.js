@@ -15,13 +15,3 @@
 //= require turbolinks
 //= require_tree .
 
-
-var clipboard = new Clipboard('#share_btn');
-    clipboard.on('success', function(e) {
-    //コピー成功時
-    $("#share_btn").addClass('is-copied').text('URLをコピーしました');
-});
-clipboard.on('error', function(e) {
-    //エラー時
-    $("#share_btn").addClass('is-copied').text('コピーに失敗しました');
-});
