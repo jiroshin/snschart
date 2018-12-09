@@ -17,25 +17,14 @@
     <meta property="og:description" content="私ってどんな人？匿名での人柄報告を受け付けてます！" /> 
     <meta property="og:image" content="<%= asset_url('twitter.jpg') %>" /> 
     
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-    <script>
-        function copyToClipboard() {
-            // コピー対象をJavaScript上で変数として定義する
-            var copyTarget = document.getElementById("copyTarget");
-            // コピー対象のテキストを選択する
-            copyTarget.select();
-            // 選択しているテキストをクリップボードにコピーする
-            document.execCommand("Copy");
-            // コピーをお知らせする
-            alert("URLをコピーしました。SNSで共有しよう！ : " + copyTarget.value);
-        }
-    </script>
   </head>
 
   <body>

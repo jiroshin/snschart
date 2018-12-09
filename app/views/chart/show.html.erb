@@ -1,8 +1,7 @@
-<div style="text-align:center; margin-bottom: 50px;">
-    <input id="copyTarget" type="text" value="https://snschart.herokuapp.com/chart/<%= @user.id %>" readonly>
-    <button onclick="copyToClipboard()" class="btn btn-default">URLをコピー</button>
-</div>
-
+<div style="text-align:center; margin-bottom: 50px;" >
+<a target="_blank" href="http://twitter.com/share?url=https://snschart.herokuapp.com/chart/<%= @user.id %>">
+    <div class="btn btn-default"><i class="fab fa-twitter fa-lg"></i> Twitterでページをシェア</div>
+</a></div>
 
 <h3><%= @user.username %>さんの人柄チャート</h3>
 
